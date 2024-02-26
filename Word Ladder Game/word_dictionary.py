@@ -1,3 +1,26 @@
+'''
+Trie is a tree data structure.
+Each node except the leaf node has 0 to 26 children, storing each alphabet of a word.
+
+e.g.
+['app', 'apps', 'apple', 'bed', 'bee'] can be stored as ...   
+('*' indicates end of word)
+
+              ROOT
+              / \
+            a     b
+           /       \
+          p         e
+        /          /  \
+      *p         *d    *e     
+     / \
+   *s   l
+       /
+      *e
+
+Searching for a word: O(l), l = length of the word
+'''
+
 class TrieNode:
     def __init__(self):
         self.children = {}
