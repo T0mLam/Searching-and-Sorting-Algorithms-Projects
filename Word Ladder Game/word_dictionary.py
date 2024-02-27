@@ -30,6 +30,19 @@ class WordDictionary:
         self.root = TrieNode()
         self.__file_input()
 
+    def find(self, word):
+        if not word:
+            return
+        
+        node = self.root
+
+        for char in word:
+            if char not in node.children:
+                return False
+            node = node.children[char]
+        
+        return node.end_of_word
+
     def find_neighbors(self, word):
         if not word:
             return []
@@ -108,6 +121,7 @@ if __name__ == '__main__':
     print(wd.find_neighbors('!'))
     print(wd.find_neighbors('cow'))
     print(wd.find_neighbors('life'))
+    print(wd.find('wife'))
 
     
         
