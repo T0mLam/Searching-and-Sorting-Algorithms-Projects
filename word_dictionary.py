@@ -18,6 +18,12 @@ e.g.
        /
       *e
 
+WordDictionary Class:
+    Methods
+        1. find(word: str) -> Bool
+            - Return True if the word is in the dictionary else False
+        2. find_neighbors(word: str) -> List[str]
+            - Return all neighbors of the word with 1 character difference
 '''
 class TrieNode:
     def __init__(self):
