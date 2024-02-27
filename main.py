@@ -1,4 +1,5 @@
 from word_dictionary import WordDictionary
+from timer import timer
 
 
 class WordLadder:
