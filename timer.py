@@ -14,8 +14,6 @@ print(h.func(1))
 1 Elapsed time of func(1): 0.0000000001s
 2 Hello World
 '''
-
-
 import time
 
 
