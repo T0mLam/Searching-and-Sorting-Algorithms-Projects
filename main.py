@@ -7,7 +7,7 @@ class WordLadder:
         # Create instance of the WordDictionary
         pass
 
-    def find_shortest_paths(self, src, dst):
+    def find_shortest_path(self, src, dst):
         # Find the shortest path from the source to the destination using BFS
         pass
 
