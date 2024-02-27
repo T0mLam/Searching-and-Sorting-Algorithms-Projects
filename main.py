@@ -14,6 +14,10 @@ class WordLadder:
         # Optional
         pass
 
+    def run(self):
+        # User input
+        pass
+
 '''
 Hi Artem, can you create a GUI for the project please :)
 1. 2 text input fields (1 for the starting word, 1 for the ending word)
