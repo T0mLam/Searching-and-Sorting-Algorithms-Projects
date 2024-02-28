@@ -36,7 +36,10 @@ class WordDictionary:
     Method(s)
         1. find(word: str) -> Bool
             - Return True if the word is in the dictionary else False
-        2. find_neighbors(word: str) -> List[str]
+        2. complete(word: str) -> List[str]
+            - Complete a word based on the input of the user and return 
+              the list of words ordered by their length
+        3. find_neighbors(word: str) -> List[str]
             - Return all neighbors of the word with 1 character difference
     ------------------------------------------------------------------------
     '''
