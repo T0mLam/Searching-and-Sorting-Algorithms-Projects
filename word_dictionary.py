@@ -130,6 +130,7 @@ class WordDictionary:
         # Set the node storing the last character of the word to be the end_of_word
         node.end_of_word = True
 
+
 # Testing
 if __name__ == '__main__':
     wd = WordDictionary()
