@@ -8,11 +8,11 @@ class Hello:
         print('Hello World')
     
 h = Hello()
-print(h.func(1))
+h.func(1)
 
 // Output: 
-1 Elapsed time of func(1): 0.0000000001s
-2 Hello World
+1 Hello World
+2 Elapsed time of func(1): 0.0000000001s
 '''
 import time
 
@@ -29,10 +29,22 @@ def timer(func):
         total_time = end_time - start_time
         
         # Format the arguments and keyword arguments of the methods and print them out along with the runtime
-        args = args[1:] if args[1:] else ''
-        kwargs = kwargs if kwargs else ''
-        print(f"Elapsed time of {func.__name__}({''.join(args)}{kwargs}): {total_time:.10f}s")
+        args = map(str, args[1:]) if args[1:] else ''
+        kwargs = [f'{key}={kwargs[key]}' for key in kwargs] if kwargs else ''
+        conn = ', ' if kwargs else ''
+        print(f"Elapsed time of {func.__name__}({', '.join(args)}{conn}{', '.join(kwargs)}): {total_time:.10f}s")
 
         # Return the original return value of the method
         return res
     return wrapper
+
+
+# Testing 
+if __name__ == '__main__':
+    class Hello:
+        @timer
+        def func(self, *args, **kwargs):
+            print('Hello World')
+        
+    h = Hello()
+    h.func(1, 't', end=0)
