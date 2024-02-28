@@ -13,13 +13,3 @@ class WordLadder:
     def find_k_shortest_paths(self, src, dst, k):
         # Optional
         pass
-
-    def run(self):
-        # User input
-        pass
-
-'''
-Hi Artem, can you create a GUI for the project please :)
-1. 2 text input fields (1 for the starting word, 1 for the ending word)
-2. Display the shortest path, and other possible paths (if you have time)
-'''
