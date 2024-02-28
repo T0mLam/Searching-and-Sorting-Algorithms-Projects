@@ -17,13 +17,6 @@ e.g.
    *s   l
        /
       *e
-
-WordDictionary Class:
-    Methods
-        1. find(word: str) -> Bool
-            - Return True if the word is in the dictionary else False
-        2. find_neighbors(word: str) -> List[str]
-            - Return all neighbors of the word with 1 character difference
 '''
 class TrieNode:
     def __init__(self):
@@ -32,6 +25,22 @@ class TrieNode:
 
 
 class WordDictionary:
+    '''
+    WordDictionary Class:
+    A class used for storing all words in 'words_alpha.txt' in a Trie data structure 
+    ------------------------------------------------------------------------
+    Attribute(s)
+        1. self.root: TrieNode
+            - Point to the root of the Trie
+    ------------------------------------------------------------------------
+    Method(s)
+        1. find(word: str) -> Bool
+            - Return True if the word is in the dictionary else False
+        2. find_neighbors(word: str) -> List[str]
+            - Return all neighbors of the word with 1 character difference
+    ------------------------------------------------------------------------
+    '''
+
     def __init__(self):
         self.root = TrieNode()
         self.__file_input()
@@ -124,6 +133,7 @@ class WordDictionary:
 # Testing
 if __name__ == '__main__':
     wd = WordDictionary()
+    print(wd.__doc__)
     print(wd.find_neighbors('!'))
     print(wd.find_neighbors('cow'))
     print(wd.find_neighbors('life'))
