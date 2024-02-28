@@ -57,6 +57,28 @@ class WordDictionary:
             node = node.children[char]
         
         return node.end_of_word
+    
+    def complete(self, word):
+        node = self.root
+        res = []
+
+        for char in word:
+            if char not in node.children:
+                return []
+            node = node.children[char]
+
+        cache = []
+        def dfs(node):
+            if node.end_of_word and cache:
+                res.append(word + ''.join(cache)) 
+
+            for child in node.children:
+                cache.append(child)
+                dfs(node.children[child])
+                cache.pop()
+
+        dfs(node)
+        return sorted(res, key=len)
 
     def find_neighbors(self, word):
         if not word:
@@ -139,6 +161,7 @@ if __name__ == '__main__':
     print(wd.find_neighbors('cow'))
     print(wd.find_neighbors('life'))
     print(wd.find('wife'))
+    print(wd.complete('hypothesi'))
 
     
         
