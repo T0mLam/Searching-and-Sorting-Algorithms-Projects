@@ -30,7 +30,7 @@ class WordDictionary:
     A class used for storing all words in 'words_alpha.txt' in a Trie data structure 
     ------------------------------------------------------------------------
     Attribute(s)
-        1. self.root: TrieNode
+        1. root: TrieNode
             - Point to the root of the Trie
     ------------------------------------------------------------------------
     Method(s)
