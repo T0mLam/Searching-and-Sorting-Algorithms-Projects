@@ -45,7 +45,7 @@ class WordLadder:
        while queue and len(k_shortest_paths) < k:
            _, path = queue.popleft()
            for i in range(len(path)):
-               for neighbor in self.word_dictionary.get_neighbors(path[i]):
+               for neighbor in self.word_dictionary.find_neighbors(path[i]):
                    if neighbor not in visited:
                        new_path = path[:i] + [neighbor] + path[i+1:]
                        if new_path not in k_shortest_paths:
@@ -59,3 +59,4 @@ class WordLadder:
 if __name__ == '__main__':
     wl = WordLadder()
     print(wl.find_shortest_path('eeee', 'ffff'))
+    print(wl.find_k_shortest_paths('cow', 'man', 2))
