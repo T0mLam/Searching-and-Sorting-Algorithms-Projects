@@ -32,4 +32,4 @@ class WordLadder:
 
 if __name__ == '__main__':
     wl = WordLadder()
-    print(wl.find_shortest_path('cow', 'man'))
+    print(wl.find_shortest_path('cow', 'hi'))
