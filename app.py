@@ -68,7 +68,7 @@ class WordLadderApp(tk.Tk, WordLadder):
 
     def detect_src_input(self, event):
         word = self.src_entry_var.get()
-        res = self.word_dict.complete(word)
+        res = self.word_dictionary.complete(word)
         
         self.src_entry.config(values=res[:5])
 
@@ -77,7 +77,7 @@ class WordLadderApp(tk.Tk, WordLadder):
 
     def detect_dst_input(self, event):
         word = self.dst_entry_var.get()
-        res = self.word_dict.complete(word)
+        res = self.word_dictionary.complete(word)
         
         self.dst_entry.config(values=res[:5])
 
