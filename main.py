@@ -29,7 +29,7 @@ class WordLadder:
         return []
 
     @timer
-     def find_k_shortest_paths(self, src, dst, k):
+    def find_k_shortest_paths(self, src, dst, k):
        if src == dst:
            return [[src]]
           
