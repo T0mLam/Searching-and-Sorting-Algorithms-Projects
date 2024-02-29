@@ -36,7 +36,10 @@ class WordDictionary:
     Method(s)
         1. find(word: str) -> Bool
             - Return True if the word is in the dictionary else False
-        2. find_neighbors(word: str) -> List[str]
+        2. complete(word: str) -> List[str]
+            - Complete a word based on the input of the user and return 
+              the list of words ordered by their length
+        3. find_neighbors(word: str) -> List[str]
             - Return all neighbors of the word with 1 character difference
     ------------------------------------------------------------------------
     '''
@@ -57,6 +60,28 @@ class WordDictionary:
             node = node.children[char]
         
         return node.end_of_word
+    
+    def complete(self, word):
+        node = self.root
+        res = []
+
+        for char in word:
+            if char not in node.children:
+                return []
+            node = node.children[char]
+
+        cache = []
+        def dfs(node):
+            if node.end_of_word and cache:
+                res.append(word + ''.join(cache)) 
+
+            for child in node.children:
+                cache.append(child)
+                dfs(node.children[child])
+                cache.pop()
+
+        dfs(node)
+        return sorted(res, key=len)
 
     def find_neighbors(self, word):
         if not word:
@@ -139,6 +164,7 @@ if __name__ == '__main__':
     print(wd.find_neighbors('cow'))
     print(wd.find_neighbors('life'))
     print(wd.find('wife'))
+    print(wd.complete('hypothesi'))
 
     
         
