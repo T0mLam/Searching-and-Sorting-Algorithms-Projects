@@ -1,33 +1,13 @@
 from word_dictionary import WordDictionary
 from timer import timer
-from collections import deque
+
 
 class WordLadder:
     def __init__(self):
         # Create instance of the WordDictionary
-        self.word_dictionary = WordDictionary()
         pass
 
     def find_shortest_path(self, src, dst):
-        if src == dst:
-            return src
-    queue = ([(src, [src])])
-    visited = set([src])
-    while queue:
-        current_word, path = queue.popleft()
-        for neighbor in self.WordDictionary.get_neighbors(current_node):
-            if neighbor == dst:
-                return path + [neighbor]
-        if neighbor  not in visited:
-            visited.add(neighbor)
-            queue.append((neighbor, path + [neighbor]))
-    return []
-
-
-
-
-
-
         # Find the shortest path from the source to the destination using BFS
         pass
 
