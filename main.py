@@ -56,6 +56,7 @@ class WordLadder:
                            queue = deque(sorted(queue))
        return k_shortest_paths
 
+
 if __name__ == '__main__':
     wl = WordLadder()
     print(wl.find_shortest_path('eeee', 'ffff'))
