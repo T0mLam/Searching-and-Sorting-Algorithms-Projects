@@ -15,3 +15,9 @@ python3 app.py
 
 ## Gameplay 
 ![Gameplay Screenshot](/assets/gameplay_screenshot.png)
+
+## Command log
+```
+Elapsed time of __init__(): 0.8985305410s
+Elapsed time of find_shortest_path(cow, red): 0.0887545832s
+```
