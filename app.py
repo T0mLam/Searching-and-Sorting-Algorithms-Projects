@@ -86,4 +86,4 @@ class WordLadderApp(tk.Tk, WordLadder):
 
 
 if __name__ == '__main__':
-    Wor
+    WordLadderApp()
