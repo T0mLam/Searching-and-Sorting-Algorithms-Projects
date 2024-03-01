@@ -1,6 +1,6 @@
 # Word Ladder Game
 A game that computes the shortest path from the starting word to the destination word.
-## Repository Content
+## Content
 1. app.py - The graphical application of the World Ladder Game
 2. main.py - The implementation of the WordLadder class
 3. timer.py - The implementation of the timer decorator
@@ -13,3 +13,5 @@ A game that computes the shortest path from the starting word to the destination
 python3 app.py
 ```
 
+## Gameplay 
+![Gameplay Screenshot](/assets/gameplay_screenshot.png)
