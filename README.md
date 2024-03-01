@@ -10,7 +10,7 @@
 Download all the required files
 
 Run in terminal:
-'''
+```
 python3 app.py
-'''
+```
 
