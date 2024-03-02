@@ -97,9 +97,6 @@ class WordDictionary:
 
         cache = []
         def dfs(i, node):
-            # Enable dfs() to access the outer variable res
-            nonlocal res
-
             # 1. Check i == n (whether the search reaches the end of the word)
             # 2. Check node.end_of_word (whether the word exists in the Trie)
             # 3. Add the found word to res
