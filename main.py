@@ -1,6 +1,6 @@
 from collections import deque
-from timer import timer
 
+from timer import timer
 from word_dictionary import WordDictionary
 
 
