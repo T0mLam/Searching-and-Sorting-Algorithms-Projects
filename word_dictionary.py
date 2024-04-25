@@ -162,7 +162,3 @@ if __name__ == '__main__':
     print(wd.find_neighbors('life'))
     print(wd.find('wife'))
     print(wd.complete('hypothesi'))
-
-    
-        
-
