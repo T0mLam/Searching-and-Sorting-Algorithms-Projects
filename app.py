@@ -1,6 +1,7 @@
-from main import WordLadder
 import tkinter as tk
 from tkinter import ttk
+
+from main import WordLadder
 
 
 class WordLadderApp(tk.Tk, WordLadder):
@@ -16,8 +17,6 @@ class WordLadderApp(tk.Tk, WordLadder):
 
         self.create_widgets()
         self.create_layout()
-
-        self.mainloop()
 
     def create_widgets(self):
         label_font = ('Arial', 36)
@@ -86,4 +85,5 @@ class WordLadderApp(tk.Tk, WordLadder):
 
 
 if __name__ == '__main__':
-    WordLadderApp()
+    app = WordLadderApp()
+    app.mainloop()
