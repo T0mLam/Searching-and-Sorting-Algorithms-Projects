@@ -30,6 +30,7 @@ class WordLadder:
         return []
 
 
+# Testing
 if __name__ == '__main__':
     wl = WordLadder()
     print(wl.find_shortest_path('eeee', 'ffff'))
